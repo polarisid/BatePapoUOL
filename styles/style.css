@@ -7,14 +7,55 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+   
 
 }
-.pegar-id{
-    margin:20px;
-    width: 150px;
-    height: 80px;
+
+.login-page img{
+    margin-top: 72px;
+    height: 92px;
+    width: 130px;
+    margin-bottom: 94px;
 }
+.login-page input{
+    height: 54px;
+    width: 261px;
+    border-radius: 4px;
+    border: 1px solid #D7D7D7;
+    font-size:18px;
+    text-align: center;
+}
+.login-page button{
+    margin-top: 15px;
+    height: 45px;
+    width: 109px;
+    border-radius: 9px;
+    border: none;
+    background-color: #E7E7E7;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #696969;
+
+    
+}
+
+.login-page input::placeholder{
+text-align: center;
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0em;
+color: #AEAEAE;
+;
+}
+
 body{
     box-sizing:border-box;
     background-color: #E5E5E5;
@@ -55,9 +96,22 @@ header ion-icon{
     background-color: #ffffff;
     position: fixed;
     bottom: 0px;
+    font-size: 18px;
+    font-family: Roboto;
+    padding-left: 17px;
+
 }
 .input-box::placeholder{
-    padding-left: 17px;
+    
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:  #000000;
+
 }
 footer ion-icon{
     position: fixed;
