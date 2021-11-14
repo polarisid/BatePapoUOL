@@ -19,7 +19,7 @@
     </div>
     <header>
         <img src="./assets/logo.png" alt="">
-        <ion-icon name="people" onclick=""></ion-icon>
+        <ion-icon name="people" onclick="exibeLateral()"></ion-icon>
     </header>
     
     <ul class="messages-container">
@@ -28,8 +28,30 @@
 
     <footer class="">
     <input class="input-box" type="text" placeholder="Escreva aqui...">
-    <ion-icon name="paper-plane-outline" onclick="enviarMSG()"></ion-icon>
+    <ion-icon data-identifier="send-message" name="paper-plane-outline" onclick="enviarMSG()"></ion-icon>
     </footer>
+
+    <aside class="escondido" >
+        <div class="overside" onclick="fora()"></div>
+        <div class="content-side-box">
+            <p class = "title-side">Escolha um contato para enviar mensagem: </p>
+            <div class="todos">
+                <ion-icon name="people"></ion-icon>
+                <p>Todos</p></div>
+            <ul class="persons-list">
+
+            </ul>
+            <p class = "title-side">Escolha a visibilidade </p>
+            <div class="public">
+                <ion-icon name="lock-open"></ion-icon>
+                <p class="name-person-list">Público</p>
+            </div>
+            <div class="reservado">   
+                <ion-icon name="lock-closed"></ion-icon>       
+                <p class="name-person-list">Reservado</p>
+            </div>
+        </div>
+    </aside>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

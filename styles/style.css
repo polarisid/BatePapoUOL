@@ -99,6 +99,9 @@ header ion-icon{
     font-size: 18px;
     font-family: Roboto;
     padding-left: 17px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    border: none;
+    outline: none;
 
 }
 .input-box::placeholder{
@@ -144,9 +147,7 @@ footer ion-icon{
 }
 ul{
     padding-top: 80px;
-    padding-bottom:80px;
-
-    
+    padding-bottom:80px;    
 }
 
 .status{
@@ -172,6 +173,79 @@ font-weight: 700;
 line-height: 16px;
 letter-spacing: 0em;
 }
+
+
+aside{
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    display: flex;
+    
+
+}
+.overside{
+    background: rgba(0, 0, 0, 0);
+    width: 30%;
+    height: 100%;
+    
+
+}
+
+
+
+.person-in-list{
+    display: flex;
+    align-items: center;
+}
+.name-person-list,.todos p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;  
+    padding-left: 9px;
+}
+
+.person-in-list,.todos ion-icon{
+font-size: 21px; 
+}
+
+
+
+
+.title-side{
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: center;
+color: #000000;
+margin: 50px 20px;
+
+
+}
+.content-side-box{
+    width: 70%;
+    height: 100%;
+    background-color:#ffffff;
+    position: fixed;
+    right: 0;
+    top: 0px;
+    padding-left: 8px;
+    overflow-y: scroll;
+}
+
+.todos,.public,.reservado{
+    display: flex;
+}
+
+
 
 .escondido{
     display: none;
