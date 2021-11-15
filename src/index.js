@@ -133,22 +133,37 @@ function postarMsg(resposta){
             `
             <li class="message-text status ">
                 <span class="hour">(${dados_msg[i].time})</span>
-                <span class="person-name">${dados_msg[i].from }</span>
+                <span class="person-name">${dados_msg[i].from}</span>
                 <span>${dados_msg[i].text }</span>
             </li>
             `
         }
-        else if(dados_msg[i].to =="Todos"){
+
+        else if(dados_msg[i].type =="message"){
             msgHTML.innerHTML +=
             `
             <li class="message-text" data-identifier="message">
                 <span class="hour">(${dados_msg[i].time})</span>
-                <span class="person-name">${dados_msg[i].from }</span>
+                <span class="person-name">${dados_msg[i].from} </span>
+                <p> para <span> </span></p>
+                <span class="person-name"> ${dados_msg[i].to} </span>
                 <span>${dados_msg[i].text }</span>
             </li>
             `
         }
-        else if(dados_msg[i].to ==nome){
+        else if(dados_msg[i].to==nome && dados_msg[i].type=="private_message"){
+            msgHTML.innerHTML +=
+            `
+            <li class="message-text private" data-identifier="message"">
+                <span class="hour">(${dados_msg[i].time})</span>
+                <span class="person-name">${dados_msg[i].from}</span>
+                <p> reservadamente para  <span> </span> </p>
+                <span class="person-name"> ${dados_msg[i].to}</span>
+                <span>${dados_msg[i].text}</span>
+            </li>
+            `
+        }
+        else if(dados_msg[i].from==nome && dados_msg[i].type=="private_message" ){
             msgHTML.innerHTML +=
             `
             <li class="message-text private" data-identifier="message"">
@@ -160,10 +175,10 @@ function postarMsg(resposta){
             </li>
             `
         }
-        else if(dados_msg[i].from==nome &&dados_msg[i].to !="Todos" ){
+        /*else if(dados_msg[i].from==nome && dados_msg[i].type =="message" ){
             msgHTML.innerHTML +=
             `
-            <li class="message-text private" data-identifier="message"">
+            <li class="message-text" data-identifier="message"">
                 <span class="hour">(${dados_msg[i].time})</span>
                 <span class="person-name">${dados_msg[i].from}</span>
                 <p> reservadamente para  <span> </span> </p>
@@ -171,7 +186,7 @@ function postarMsg(resposta){
                 <span>${dados_msg[i].text}</span>
             </li>
             `
-        }
+        }*/
 
         }
         let elementoQueQueroQueApareca = document.querySelector("ul li:last-child");
