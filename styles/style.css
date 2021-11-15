@@ -258,7 +258,7 @@ margin: 50px 20px;
 }
 
 
-.public,.reservado,.todos{
+.public,.reservado,.todos,.person-in-list{
     display: flex;
     align-items: center;
     justify-content: space-between;
