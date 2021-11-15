@@ -11,6 +11,13 @@ let dados_persons2;
 let dados_nome_direct = "Todos";
 let dados_type_message = "message";
 
+document.addEventListener('keypress', function(e){
+    if(e.which == 13){
+        enviarMSG()
+    }
+ }, false); ///enviar com a tecla enter
+
+
 let tipo_envio;
 document.querySelector(".public").click(); // para resolver o bug do selecionável na área
 
