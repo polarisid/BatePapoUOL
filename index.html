@@ -28,6 +28,7 @@
 
     <footer class="">
     <input class="input-box" type="text" placeholder="Escreva aqui...">
+    <span class="tipo-envio">Enviando para Todos</span>
     <ion-icon data-identifier="send-message" name="paper-plane-outline" onclick="enviarMSG()"></ion-icon>
     </footer>
 
@@ -35,21 +36,35 @@
         <div class="overside" onclick="fora()"></div>
         <div class="content-side-box">
             <p class = "title-side">Escolha um contato para enviar mensagem: </p>
-            <div class="todos">
-                <ion-icon name="people"></ion-icon>
-                <p>Todos</p></div>
-            <ul class="persons-list">
-
-            </ul>
-            <p class = "title-side">Escolha a visibilidade </p>
-            <div class="public">
-                <ion-icon name="lock-open"></ion-icon>
-                <p class="name-person-list">Público</p>
+            <div class="selection-person-container">
+                <div class="todos" onclick="">
+                    <div class="left-content">
+                        <ion-icon class="lateral-icons" name="people"></ion-icon>
+                        <p>Todos</p>
+                    </div>
+                    <ion-icon class ="icon-check1 visible"name="checkmark"></ion-icon>
+                </div>
+                <ul class="persons-list">
+                    
+                </ul>
             </div>
-            <div class="reservado">   
-                <ion-icon name="lock-closed"></ion-icon>       
-                <p class="name-person-list">Reservado</p>
-            </div>
+            <div class = "title-side" id="visibilidade">Escolha a visibilidade</div>
+                <div class="public" onclick="selectionType(this)">
+                    <div class="left-content">
+                        <ion-icon class="lateral-icons" name="lock-open"></ion-icon>
+                        <p class="name-person-list">Público</p>
+                    </div>
+                    <ion-icon class="icon-check visible" name="checkmark"></ion-icon>
+                </div>
+                <div class="reservado" onclick="selectionType(this)">
+                    <div class="left-content">
+                        <ion-icon class="lateral-icons" name="lock-closed"></ion-icon>
+                        <p class="name-person-list">Reservado</p>
+                    </div>
+                    <ion-icon class="icon-check" name="checkmark"></ion-icon>
+                    </div>   
+                </div>
+           
         </div>
     </aside>
 

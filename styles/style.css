@@ -102,7 +102,13 @@ header ion-icon{
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     border: none;
     outline: none;
+    padding-right:20px;
+    overflow-x: initial;
 
+}
+
+.message-text.private{
+    background-color: #FFDEDE;
 }
 .input-box::placeholder{
     
@@ -123,10 +129,6 @@ footer ion-icon{
     font-size: 26px;
     cursor: pointer;
 }
-
-
-
-
 
 .message-text{
     
@@ -193,12 +195,26 @@ aside{
     
 
 }
+.persons-list{
+    padding-top: 5px ;
+    padding-bottom: 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
 
-
+.tipo-envio{
+    position: fixed;
+    z-index: 0;
+    bottom: 10px;
+    left: 10px;
+}
 
 .person-in-list{
     display: flex;
     align-items: center;
+    padding-bottom: 5px;
 }
 .name-person-list,.todos p{
     font-family: Roboto;
@@ -241,12 +257,38 @@ margin: 50px 20px;
     overflow-y: scroll;
 }
 
-.todos,.public,.reservado{
+
+.public,.reservado,.todos{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-content{
+    display: flex;
+}
+ion-icon.icon-check{
+    display: none;
+    color: #28BB25;
+    font-size: 18px;   
+}
+ion-icon.icon-check1{
+    display: none;
+    color: #28BB25;
+    font-size: 18px;   
 }
 
 
+ion-icon.lateral-icons{
+    font-size: 18px;
+}
 
 .escondido{
     display: none;
+}
+
+ion-icon.icon-check.visible, .todos{
+    display:flex;
+}
+ion-icon.icon-check1.visible, .todos{
+    display:flex;
 }
